@@ -112,6 +112,6 @@ S3 bucket  (PRIVATE — public access blocked; only CloudFront can read)
 
 <div align="center">
 
-Built & deployed by **Shinn** · [Portfolio](https://www.shinn.life) · [GitHub](https://github.com/Shinn0x)
+Built & deployed by **Shinn** · [Portfolio](https://localhostshinn.xyz) · [GitHub](https://github.com/Shinn0x)
 
 </div>
