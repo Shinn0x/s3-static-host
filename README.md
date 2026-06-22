@@ -96,16 +96,6 @@ S3 bucket  (PRIVATE — public access blocked; only CloudFront can read)
 
 ---
 
-## 💻 Run it locally
-
-No build needed — open `index.html` directly, or serve the folder:
-```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
-```
-
----
-
 ## 🎓 What I learned
 
 - Applying the **least-privilege principle** with a dedicated IAM user scoped to only the actions this deploy needs (and where resource-level scoping is/isn't possible)
