@@ -1,0 +1,16 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Environment & secrets — never commit AWS creds
+.env
+.env.*
+.aws/
+*.pem
+credentials
+
+# Logs
+*.log
