@@ -2,7 +2,7 @@
 
 A hands-on AWS project: a single-page **"About Me"** site (plain HTML/CSS/JS, no build step) hosted on **Amazon S3** and delivered globally through **Amazon CloudFront** — served on a custom subdomain with HTTPS, a **private** bucket locked down via **Origin Access Control (OAC)**, and a custom error page.
 
-> 🔗 **Live demo:** _add your URL here_ → `https://s3-static.shinn.life`
+> 🔗 **Live demo:** _add your URL here_ → `[[https://mini-static.shinn.life/]]`
 
 ---
 
@@ -162,7 +162,7 @@ document doesn't apply behind OAC, so CloudFront handles this.
 
 ### 6. Point the subdomain at CloudFront (Route 53)
 In the `shinn.life` hosted zone, create an **alias** record (alias records are free and resolve at the edge — use them instead of a plain A/CNAME):
-- **Record name:** `s3-static` · **Type:** `A` · **Alias:** Yes → *Alias to CloudFront distribution* → pick the distribution
+- **Record name:** `mini-static` · **Type:** `A` · **Alias:** Yes → *Alias to CloudFront distribution* → pick the distribution
 - Optionally add a matching **`AAAA`** alias record for IPv6
 
 ### 7. Redeploy after changes
@@ -171,16 +171,6 @@ aws s3 sync . s3://<bucket-name>/ --exclude "README.md" --exclude ".git/*"
 aws cloudfront create-invalidation --distribution-id <id> --paths "/*"
 ```
 The invalidation clears the edge cache so visitors see the latest version immediately.
-
----
-
-## Run it locally
-
-No build needed — open `index.html` directly, or serve the folder:
-```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
-```
 
 ---
 
